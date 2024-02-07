@@ -52,9 +52,13 @@ export default function Index() {
             Remix Docs
           </a>
         </li>
-        <li>
-          <Link to={"/Login"}> Login </Link>
-        </li>
+
+        <br></br>
+
+        <Link to={"/Login"}>
+          {" "}
+          <button> Crear Saludo ... </button>{" "}
+        </Link>
       </ul>
 
       <h1>Saludos creados </h1>
