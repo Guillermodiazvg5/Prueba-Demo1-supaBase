@@ -1,12 +1,15 @@
 import { createClient } from "@supabase/supabase-js";
 
-export const clientSupaBase = createClient(
-  "https://uyqoviyiatqlhatppoju.supabase.co",
 
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV5cW92aXlpYXRxbGhhdHBwb2p1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDcxNzMyMTMsImV4cCI6MjAyMjc0OTIxM30.XVUWqUVUkjsuYIftpquY4nQkbLw0MwsXZVmW35DOt20"
+
+
+export const clientSupaBase = createClient(
+  process.env.DATABASE_URL,
+
+  process.env.SUPABASE_ANON_KEY
 );
 
-// Autentica con un usuario y contraseña
+// Autentica con un usuario y contraseña credenciales usuario tabla saludos 
 const email = "guillermodiazvg5@hotmail.com";
 const password = "Gddv19922";
 
