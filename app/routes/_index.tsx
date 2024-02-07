@@ -67,8 +67,6 @@ export default function Index() {
           <p>{post.autor}</p>
         </div>
       ))}
-
-      
     </div>
   );
 }
