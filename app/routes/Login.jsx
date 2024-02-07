@@ -14,21 +14,6 @@ export const action = async ({ request }) => {
   const saludo = form.get("saludo");
   const usuario = form.get("usuario");
 
-  const result = await clientSupaBase
-    .from("saludos")
-    .insert([{ saludo: saludo, autor: usuario }]);
-
-  console.log("primer redireccionamiiento ");
-  console.log(result);
-
-  console.log(result);
-
-  if (result.error) {
-    console.error("Error al insertar datos:", result.error.message);
-  } else {
-    console.log("Datos insertados correctamente:", result.data);
-  }
-
   const fieldErrors = {
     saludo:
       saludo.length < 9 ? "El saludo debe contener mas de 9 caracteres " : null,
@@ -44,6 +29,19 @@ export const action = async ({ request }) => {
 
   if (hasErros) {
     return badRequest({ fieldErrors, fields });
+  }
+
+  const result = await clientSupaBase
+    .from("saludos")
+    .insert([{ saludo: saludo, autor: usuario }]);
+
+  console.log("primer redireccionamiiento ");
+  console.log(result);
+
+  if (result.error) {
+    console.error("Error al insertar datos:", result.error.message);
+  } else {
+    console.log("Datos insertados correctamente:", result.data);
   }
 
   console.log({ fields });
