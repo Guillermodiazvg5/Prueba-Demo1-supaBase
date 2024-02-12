@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1707542656550,
+      "tag": "0002_parallel_thor_girl",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1707546639813,
+      "tag": "0004_woozy_harpoon",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1707696849683,
+      "tag": "0005_tranquil_sleepwalker",
+      "breakpoints": true
+    }
+  ]
+}
