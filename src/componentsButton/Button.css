@@ -1,0 +1,40 @@
+.button{
+    --accent-color: DodgerBlue;
+    background-color: var(--accent-color);
+    border: none;
+    color:white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.secondary {
+
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+
+}
+
+.button.secondary:hover {
+    background-color: var(--accent-color); /* Cambia el color al estar sobre el botón */
+    color: white;                        /* Texto en blanco al estar sobre el botón */
+  }
+
+
+
+.tertiary {
+
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--accent-color);
+
+}
+
+.button.tertiary:hover {
+   border: 1px solid var(--accent-color); 
+  }

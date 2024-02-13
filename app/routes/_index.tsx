@@ -3,6 +3,10 @@ import { Link, useLoaderData } from "@remix-run/react";
 
 import { clientSupaBase } from "../servicesSupaBase/client";
 
+
+import  Button  from "src/componentsButton/Button";
+import { Secondary } from "src/stories/Button.stories";
+
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
@@ -59,6 +63,14 @@ export default function Index() {
           {" "}
           <button> Crear Saludo ... </button>{" "}
         </Link>
+
+        <br></br>
+        <br></br>
+
+          <a href="https://storybook.js.org/">
+         <Button type="secondary" >Storybook</Button>
+          </a>
+
       </ul>
 
       <h1>Saludos creados </h1>
