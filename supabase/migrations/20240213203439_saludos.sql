@@ -4,6 +4,7 @@ CREATE TABLE saludos
     saludo text COLLATE pg_catalog."default",
     autor text COLLATE pg_catalog."default",
     CONSTRAINT saludos_pkey PRIMARY KEY (id)
+    
 );
 
 -- Cambio de propietario de la tabla
