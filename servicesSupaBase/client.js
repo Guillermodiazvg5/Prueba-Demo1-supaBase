@@ -28,32 +28,3 @@ if (error) {
 
 
 
-// drizzel
-
-
-
-{/** */}
-import { drizzle } from "drizzle-orm/postgres-js";
-import { migrate } from "drizzle-orm/postgres-js/migrator";
- 
-import postgres from "postgres";
-
-
-// cadena de conexion 
-
-const connectionString = 'postgres://postgres.uyqoviyiatqlhatppoju:Gddv1992215041992@aws-0-us-west-1.pooler.supabase.com:5432/postgres'
-
-
-
-const sql = postgres(connectionString, { max: 1 })
-const db = drizzle(sql);
-
-
-// aplicar migraciones desde la ruta correspondiente
-
-await migrate(db, { migrationsFolder: "./supabase/migrations" });
-
-console.log("Ejecutando migraciones hacia instancia Web supaBase 🔃✅")
-
-await sql.end();  
-

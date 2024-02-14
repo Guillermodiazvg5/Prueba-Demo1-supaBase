@@ -2,7 +2,7 @@ import { Form, json, redirect, useRouteError } from "@remix-run/react";
 
 import { useNavigation, useActionData } from "@remix-run/react";
 
-import { clientSupaBase } from "../servicesSupaBase/client";
+import { clientSupaBase } from "servicesSupaBase/client";
 
 const badRequest = (data) => {
   return json(data, { status: 400 });

@@ -1,7 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
 
-import { clientSupaBase } from "../servicesSupaBase/client";
+import { clientSupaBase } from "servicesSupaBase/client";
 
 
 import  Button  from "src/componentsButton/Button";
